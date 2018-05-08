@@ -6,7 +6,7 @@ Created on Sun Dec 24 22:27:17 2017 by Dhiraj Upadhyaya
 #apply
 import pandas as pd
 import numpy as np
-df = pd.read_csv('dsstudents2.csv')
+df = pd.read_csv('./data/dsstudents2.csv')
 df.columns
 cols = ['course', 'gender', 'rpgm', 'excel', 'sql', 'stats']
 df2 = df[cols]
