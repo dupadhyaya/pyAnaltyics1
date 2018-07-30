@@ -25,3 +25,16 @@ model.coef_
 # sm
 logit = sm.Logit(y, X)
 logit.fit().params
+
+
+
+#%%
+
+import statsmodels.api as sm
+from sklearn.datasets import make_blobs
+
+x, y = make_blobs(n_samples=50, n_features=2, cluster_std=5.0,
+                  centers=[(0,0), (2,2)], shuffle=False, random_state=12)
+x
+logit_model = sm.Logit(y, sm.add_constant(x)).fit()
+print( logit_model.summary2())
